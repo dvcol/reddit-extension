@@ -3,9 +3,9 @@ import type { chrome } from 'chrome';
 
 import type { DefineComponent, WebComponents } from '~/web/define-component';
 
-export const baseUrl = 'web-extension-template' as const;
+export const baseUrl = 'reddit-extension' as const;
 
-type WebExtensionTemplate = {
+type RedditExtension = {
   WebComponents: WebComponents;
   defineComponent: DefineComponent;
   default: DefineComponent;
@@ -17,4 +17,4 @@ declare global {
   }
 }
 
-export type { WebExtensionTemplate, DefineComponent, WebComponents };
+export type { RedditExtension, DefineComponent, WebComponents };

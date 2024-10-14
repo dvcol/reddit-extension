@@ -1,5 +1,5 @@
 
-<h1 align="center">Welcome to <i>Web Extension Template</i></h1>
+<h1 align="center">Welcome to <i>Reddit Peek</i></h1>
 <p>
   <img src="https://img.shields.io/badge/pnpm-%3E%3D7.0.0-blue.svg" />
   <img src="https://img.shields.io/badge/node-%3E%3D17.0.0-blue.svg" />
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-> <Web Extension Template> description here
+> <Reddit Peek> description here
 ## Prerequisites
 
 - pnpm >=9.0.0

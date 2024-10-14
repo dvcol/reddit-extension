@@ -56,7 +56,9 @@ const getPlugins = (_isDev: boolean, _isWeb: boolean): PluginOption[] => {
         server.ws.on('fetch:i18n', async () => {
           const dir = await readdir('dist/_locales');
           const locales = dir.map(_lang =>
-            readFile(`dist/_locales/${_lang}/messages.json`, { encoding: 'utf-8' }).then(locale => ({ lang: _lang, locale: JSON.parse(locale) })),
+            readFile(`dist/_locales/${_lang}/messages.json`, {
+              encoding: 'utf-8',
+            }).then(locale => ({ lang: _lang, locale: JSON.parse(locale) })),
           );
           server.ws.send({
             type: 'custom',
@@ -107,15 +109,15 @@ const getPlugins = (_isDev: boolean, _isWeb: boolean): PluginOption[] => {
         outDir: resolveParent('dist/lib'),
       }),
       VitePWA({
-        scope: '/web-extension-template/',
+        scope: '/reddit-extension/',
         registerType: 'autoUpdate',
         includeAssets: ['**/favicon.ico', '**/*.svg', '**/*.png', '**/*.webp', '**/*.json'],
         manifest: {
           name: pkg.title || pkg.name,
-          short_name: 'Web Extension Template',
+          short_name: 'Reddit Peek',
           description: pkg.description,
-          theme_color: '#ff3c00',
-          background_color: '#ffffff',
+          theme_color: '#FC4A00',
+          background_color: '#000000',
           display: 'standalone',
           icons: [
             {

@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <base target="_blank" />
-    <title>Web Extension Template Popup</title>
+    <title>Reddit Peek Popup</title>
   </head>
   <body style="min-width: 100px">
     <div id="app-popup">
-      <wc-web-extension-template>
+      <wc-reddit-extension>
         <div id="app-skeleton-container">
           <header id="app-skeleton-navbar"></header>
           <main id="app-skeleton-content">
@@ -252,7 +252,7 @@
           </main>
           <footer id="app-skeleton-footer"></footer>
         </div>
-      </wc-web-extension-template>
+      </wc-reddit-extension>
     </div>
     <script type="module" src="./main.ts"></script>
   </body>
@@ -274,7 +274,7 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    wc-web-extension-template {
+    wc-reddit-extension {
         display: flex;
         flex: 1 1 auto;
         flex-direction: column;

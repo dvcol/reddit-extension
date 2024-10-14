@@ -4,26 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Extension Template</title>
+    <title>Reddit Peek</title>
 
-    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link rel="fluid-icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link rel="mask-icon" href="./assets/logo.svg" color="#181818" />
+    <link rel="icon" href="./assets/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="fluid-icon" href="./assets/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="./assets/favicon/favicon.svg" color="#181818" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon/favicon-48x48.png" />
 
     <meta name="msapplication-TileColor" content="#b92900">
-    <meta name="theme-color" content="#ff3c00">
+    <meta name="theme-color" content="#FC4A00">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   </head>
   <body>
-    <wc-web-extension-template>
+    <wc-reddit-extension>
       <div id="app-skeleton-container">
         <header id="app-skeleton-navbar"></header>
         <main id="app-skeleton-content">
@@ -268,7 +266,7 @@
         </main>
         <footer id="app-skeleton-footer"></footer>
       </div>
-    </wc-web-extension-template>
+    </wc-reddit-extension>
     <script type="module" src="./views/options/main.ts"></script>
   </body>
 </html>
@@ -285,7 +283,7 @@
         background: #181818;
     }
 
-    wc-web-extension-template {
+    wc-reddit-extension {
         display: flex;
         flex: 1 1 auto;
         flex-direction: column;

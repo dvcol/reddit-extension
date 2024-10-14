@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/web-extension-template.iml" filepath="$PROJECT_DIR$/.idea/web-extension-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/reddit-extension.iml" filepath="$PROJECT_DIR$/.idea/reddit-extension.iml" />
     </modules>
   </component>
 </project>

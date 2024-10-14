@@ -3,7 +3,7 @@
   import { link } from '@dvcol/svelte-simple-router/router';
   import { transition } from '@dvcol/svelte-simple-router/utils';
 
-  import svelteLogo from '~/assets/logo.svg';
+  import Logo from '~/assets/svg/reddit-alien.svg';
   import { options, RouteName } from '~/router/routes';
   import { useI18n } from '~/utils/i18n.utils';
 
@@ -13,7 +13,7 @@
 <main class="home-container">
   <div>
     <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
+      <img src={Logo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
   <h1>{i18n('title')}</h1>
@@ -46,7 +46,7 @@
   }
 
   .logo {
-    height: 6em;
+    height: 10rem;
     padding: 1.5em;
     transition: filter 300ms;
     will-change: filter;

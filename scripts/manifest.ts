@@ -13,9 +13,9 @@ export const manifest: Manifest.WebExtensionManifest = {
   description: pkg.description,
   default_locale: 'en',
   icons: {
-    16: 'icons/icon-512.png',
-    48: 'icons/icon-512.png',
-    128: 'icons/icon-512.png',
+    16: 'icons/favicon-512.png',
+    48: 'icons/favicon-512.png',
+    128: 'icons/favicon-512.png',
   },
   options_ui: {
     page: 'views/options/index.html',
@@ -23,7 +23,7 @@ export const manifest: Manifest.WebExtensionManifest = {
   },
   action: {
     default_title: pkg.title || pkg.name,
-    default_icon: 'icons/icon-512.png',
+    default_icon: 'icons/favicon-512.png',
     default_popup: 'views/popup/index.html',
   },
   background: {
