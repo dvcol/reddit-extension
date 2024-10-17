@@ -15,11 +15,20 @@ importers:
         specifier: ^1.17.2
         version: 1.17.2
       '@dvcol/svelte-simple-router':
-        specifier: ^1.3.0
-        version: 1.3.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
+        specifier: ^1.4.0
+        version: 1.4.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
       '@dvcol/web-extension-utils':
         specifier: ^3.4.4
         version: 3.4.4
+      '@tanstack/query-sync-storage-persister':
+        specifier: ^5.59.13
+        version: 5.59.13
+      '@tanstack/svelte-query':
+        specifier: https://pkg.pr.new/@tanstack/svelte-query@ccce0b8
+        version: https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244)
+      '@tanstack/svelte-query-persist-client':
+        specifier: https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8
+        version: https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)
       svelte:
         specifier: next
         version: 5.0.0-next.244
@@ -39,6 +48,12 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: next
         version: 4.0.0-next.7(svelte@5.0.0-next.244)(vite@5.4.2(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(terser@5.31.6))
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.59.7
+        version: 5.59.7(eslint@8.57.0)(typescript@5.5.4)
+      '@tanstack/svelte-query-devtools':
+        specifier: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8
+        version: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)
       '@tsconfig/node22':
         specifier: ^22.0.0
         version: 22.0.0
@@ -1080,8 +1095,8 @@ packages:
       postcss-scss:
         optional: true
 
-  '@dvcol/svelte-simple-router@1.3.0':
-    resolution: {integrity: sha512-QJXf922+I1j/mhecJw0Uwif5qCjnecnBvXV3VBLt4FvGRommDYm2MwpBYjoDT9vzakYg3Qd0xluV2s12jb2g8g==}
+  '@dvcol/svelte-simple-router@1.4.0':
+    resolution: {integrity: sha512-H4E4P6/xfrEIK79sDhFw9jD1hJOoTNumBmRfPznGtN6O+DFkHBLbPku+fpTMDYegeYRCW0IhkBH3KKlfh9Drug==}
     engines: {node: '>=20', pnpm: '>= 8'}
     peerDependencies:
       svelte: '>=5'
@@ -1663,6 +1678,52 @@ packages:
       svelte: ^5.0.0-next.96 || ^5.0.0
       vite: ^5.0.0
 
+  '@tanstack/eslint-plugin-query@5.59.7':
+    resolution: {integrity: sha512-txQGX5yC+4gmbR81EXaum2tOxeDQkRCWnaLmaP/pSrbIVCUkbMbrxxsaoOgN+fBqqqGo9V3LoCVL6ez1tRUF7Q==}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+
+  '@tanstack/query-core@5.59.13':
+    resolution: {integrity: sha512-Oou0bBu/P8+oYjXsJQ11j+gcpLAMpqW42UlokQYEz4dE7+hOtVO9rVuolJKgEccqzvyFzqX4/zZWY+R/v1wVsQ==}
+
+  '@tanstack/query-core@https://pkg.pr.new/TanStack/query/@tanstack/query-core@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/TanStack/query/@tanstack/query-core@ccce0b8}
+    version: 5.56.2
+
+  '@tanstack/query-devtools@https://pkg.pr.new/TanStack/query/@tanstack/query-devtools@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/TanStack/query/@tanstack/query-devtools@ccce0b8}
+    version: 5.58.0
+
+  '@tanstack/query-persist-client-core@5.59.13':
+    resolution: {integrity: sha512-dv6KxeJmHl8x9nCGEZtF+HW8pXYWwBX8DqZT7538RmIn+Y9rW5WSB3bCzFDr1hlaNa4B/5J+dk9L9i0egLFVoQ==}
+
+  '@tanstack/query-persist-client-core@https://pkg.pr.new/TanStack/query/@tanstack/query-persist-client-core@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/TanStack/query/@tanstack/query-persist-client-core@ccce0b8}
+    version: 5.56.2
+
+  '@tanstack/query-sync-storage-persister@5.59.13':
+    resolution: {integrity: sha512-GLgWyF49tXL4wpVWFVuaZwp6PcUbYUTkQ126Q3GGEl3xzosAhLyEKO9YkLRi8f8C2FfS7ukMbxGGr3NLQMKLCw==}
+
+  '@tanstack/svelte-query-devtools@https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8}
+    version: 5.58.0
+    peerDependencies:
+      '@tanstack/svelte-query': ^5.56.2
+      svelte: ^5.0.0-next.259
+
+  '@tanstack/svelte-query-persist-client@https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8}
+    version: 5.56.2
+    peerDependencies:
+      '@tanstack/svelte-query': ^5.56.2
+      svelte: ^5.0.0-next.259
+
+  '@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8':
+    resolution: {tarball: https://pkg.pr.new/@tanstack/svelte-query@ccce0b8}
+    version: 5.56.2
+    peerDependencies:
+      svelte: ^5.0.0-next.259
+
   '@tsconfig/node22@22.0.0':
     resolution: {integrity: sha512-twLQ77zevtxobBOD4ToAtVmuYrpeYUh3qh+TEp+08IWhpsrIflVHqQ1F1CiPxQGL7doCdBIOOCF+1Tm833faNg==}
 
@@ -1776,6 +1837,10 @@ packages:
     resolution: {integrity: sha512-jjhdIE/FPF2B7Z1uzc6i3oWKbGcHb87Qw7AWj6jmEqNOfDFbJWtjt/XfwCpvNkpGWlcJaog5vTR+VV8+w9JflA==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
+  '@typescript-eslint/scope-manager@8.9.0':
+    resolution: {integrity: sha512-bZu9bUud9ym1cabmOYH9S6TnbWRzpklVmwqICeOulTCZ9ue2/pczWzQvt/cGj2r2o1RdKoZbuEMalJJSYw3pHQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/type-utils@7.18.0':
     resolution: {integrity: sha512-XL0FJXuCLaDuX2sYqZUUSOJ2sG5/i1AAze+axqmLnSkNEVMVYLF+cbwlB2w8D1tinFuSikHmFta+P+HOofrLeA==}
     engines: {node: ^18.18.0 || >=20.0.0}
@@ -1790,9 +1855,22 @@ packages:
     resolution: {integrity: sha512-iZqi+Ds1y4EDYUtlOOC+aUmxnE9xS/yCigkjA7XpTKV6nCBd3Hp/PRGGmdwnfkV2ThMyYldP1wRpm/id99spTQ==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
+  '@typescript-eslint/types@8.9.0':
+    resolution: {integrity: sha512-SjgkvdYyt1FAPhU9c6FiYCXrldwYYlIQLkuc+LfAhCna6ggp96ACncdtlbn8FmnG72tUkXclrDExOpEYf1nfJQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/typescript-estree@7.18.0':
     resolution: {integrity: sha512-aP1v/BSPnnyhMHts8cf1qQ6Q1IFwwRvAQGRvBFkWlo3/lH29OXA3Pts+c10nxRxIBrDnoMqzhgdwVe5f2D6OzA==}
     engines: {node: ^18.18.0 || >=20.0.0}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@typescript-eslint/typescript-estree@8.9.0':
+    resolution: {integrity: sha512-9iJYTgKLDG6+iqegehc5+EqE6sqaee7kb8vWpmHZ86EqwDjmlqNNHeqDVqb9duh+BY6WCNHfIGvuVU3Tf9Db0g==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '*'
     peerDependenciesMeta:
@@ -1805,9 +1883,19 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
+  '@typescript-eslint/utils@8.9.0':
+    resolution: {integrity: sha512-PKgMmaSo/Yg/F7kIZvrgrWa1+Vwn036CdNUvYFEkYbPwOH4i8xvkaRlu148W3vtheWK9ckKRIz7PBP5oUlkrvQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+
   '@typescript-eslint/visitor-keys@7.18.0':
     resolution: {integrity: sha512-cDF0/Gf81QpY3xYyJKDV14Zwdmid5+uuENhjH2EqFaF0ni+yAyq/LzMaIJdhNJXZI7uLzwIlA+V7oWoyn6Curg==}
     engines: {node: ^18.18.0 || >=20.0.0}
+
+  '@typescript-eslint/visitor-keys@8.9.0':
+    resolution: {integrity: sha512-Ht4y38ubk4L5/U8xKUBfKNYGmvKvA1CANoxiTRMM+tOLk3lbF3DvzZCxJCRSE+2GdCMSh6zq9VZJc3asc1XuAA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -7271,7 +7359,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@dvcol/svelte-simple-router@1.3.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
+  '@dvcol/svelte-simple-router@1.4.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
     dependencies:
       '@dvcol/common-utils': 1.17.2
       svelte: 5.0.0-next.244
@@ -7742,6 +7830,51 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@tanstack/eslint-plugin-query@5.59.7(eslint@8.57.0)(typescript@5.5.4)':
+    dependencies:
+      '@typescript-eslint/utils': 8.9.0(eslint@8.57.0)(typescript@5.5.4)
+      eslint: 8.57.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@tanstack/query-core@5.59.13': {}
+
+  '@tanstack/query-core@https://pkg.pr.new/TanStack/query/@tanstack/query-core@ccce0b8': {}
+
+  '@tanstack/query-devtools@https://pkg.pr.new/TanStack/query/@tanstack/query-devtools@ccce0b8': {}
+
+  '@tanstack/query-persist-client-core@5.59.13':
+    dependencies:
+      '@tanstack/query-core': 5.59.13
+
+  '@tanstack/query-persist-client-core@https://pkg.pr.new/TanStack/query/@tanstack/query-persist-client-core@ccce0b8':
+    dependencies:
+      '@tanstack/query-core': https://pkg.pr.new/TanStack/query/@tanstack/query-core@ccce0b8
+
+  '@tanstack/query-sync-storage-persister@5.59.13':
+    dependencies:
+      '@tanstack/query-core': 5.59.13
+      '@tanstack/query-persist-client-core': 5.59.13
+
+  '@tanstack/svelte-query-devtools@https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)':
+    dependencies:
+      '@tanstack/query-devtools': https://pkg.pr.new/TanStack/query/@tanstack/query-devtools@ccce0b8
+      '@tanstack/svelte-query': https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244)
+      esm-env: 1.0.0
+      svelte: 5.0.0-next.244
+
+  '@tanstack/svelte-query-persist-client@https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)':
+    dependencies:
+      '@tanstack/query-persist-client-core': https://pkg.pr.new/TanStack/query/@tanstack/query-persist-client-core@ccce0b8
+      '@tanstack/svelte-query': https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244)
+      svelte: 5.0.0-next.244
+
+  '@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244)':
+    dependencies:
+      '@tanstack/query-core': https://pkg.pr.new/TanStack/query/@tanstack/query-core@ccce0b8
+      svelte: 5.0.0-next.244
+
   '@tsconfig/node22@22.0.0': {}
 
   '@tsconfig/svelte@5.0.4': {}
@@ -7865,6 +7998,11 @@ snapshots:
       '@typescript-eslint/types': 7.18.0
       '@typescript-eslint/visitor-keys': 7.18.0
 
+  '@typescript-eslint/scope-manager@8.9.0':
+    dependencies:
+      '@typescript-eslint/types': 8.9.0
+      '@typescript-eslint/visitor-keys': 8.9.0
+
   '@typescript-eslint/type-utils@7.18.0(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.5.4)
@@ -7879,12 +8017,29 @@ snapshots:
 
   '@typescript-eslint/types@7.18.0': {}
 
+  '@typescript-eslint/types@8.9.0': {}
+
   '@typescript-eslint/typescript-estree@7.18.0(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/types': 7.18.0
       '@typescript-eslint/visitor-keys': 7.18.0
       debug: 4.3.6
       globby: 11.1.0
+      is-glob: 4.0.3
+      minimatch: 9.0.4
+      semver: 7.6.2
+      ts-api-utils: 1.3.0(typescript@5.5.4)
+    optionalDependencies:
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - supports-color
+
+  '@typescript-eslint/typescript-estree@8.9.0(typescript@5.5.4)':
+    dependencies:
+      '@typescript-eslint/types': 8.9.0
+      '@typescript-eslint/visitor-keys': 8.9.0
+      debug: 4.3.6
+      fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.4
       semver: 7.6.2
@@ -7905,9 +8060,25 @@ snapshots:
       - supports-color
       - typescript
 
+  '@typescript-eslint/utils@8.9.0(eslint@8.57.0)(typescript@5.5.4)':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
+      '@typescript-eslint/scope-manager': 8.9.0
+      '@typescript-eslint/types': 8.9.0
+      '@typescript-eslint/typescript-estree': 8.9.0(typescript@5.5.4)
+      eslint: 8.57.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
   '@typescript-eslint/visitor-keys@7.18.0':
     dependencies:
       '@typescript-eslint/types': 7.18.0
+      eslint-visitor-keys: 3.4.3
+
+  '@typescript-eslint/visitor-keys@8.9.0':
+    dependencies:
+      '@typescript-eslint/types': 8.9.0
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}

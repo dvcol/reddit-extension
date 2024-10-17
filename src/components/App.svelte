@@ -1,31 +1,27 @@
-<script lang="ts" module>
-  export type AppProps = {
-    baseUrl?: string;
-    view?: { option?: boolean; popup?: boolean; web?: boolean };
-  };
-</script>
-
 <script lang="ts">
-  import { onMount } from 'svelte';
-
-  import LazyComponent from '~/components/utils/LazyComponent.svelte';
+  import HomeComponent from '~/components/home/HomeComponent.svelte';
+  import QueryProvider from '~/components/providers/QueryProvider.svelte';
   import Suspense from '~/components/utils/Suspense.svelte';
-  import { Logger } from '~/services/logger.service';
   import { initServices } from '~/web/init-services';
 
-  const { baseUrl, view }: AppProps = $props();
-
-  const HomeComponent = import('~/components/home/HomeComponent.svelte');
-
-  onMount(() => {
-    Logger.info('baseUrl:', baseUrl);
-  });
+  const {
+    options,
+    root,
+  }: {
+    options: {
+      baseUrl?: string;
+      view?: { option?: boolean; popup?: boolean; web?: boolean };
+    };
+    root: ShadowRoot;
+  } = $props();
 </script>
 
 <div class="app-container">
-  <Suspense promise={initServices(view)}>
-    <LazyComponent component={HomeComponent} />
-  </Suspense>
+  <QueryProvider {root}>
+    <Suspense promise={initServices(options)}>
+      <HomeComponent />
+    </Suspense>
+  </QueryProvider>
 </div>
 
 <style lang="scss" global>
