@@ -12,20 +12,23 @@ importers:
         specifier: ^0.11.0
         version: 0.11.0
       '@dvcol/common-utils':
-        specifier: ^1.17.2
-        version: 1.17.2
+        specifier: ^1.18.0
+        version: 1.18.0
       '@dvcol/svelte-simple-router':
-        specifier: ^1.4.0
-        version: 1.4.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
+        specifier: ^1.5.0
+        version: 1.5.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
       '@dvcol/web-extension-utils':
-        specifier: ^3.4.4
-        version: 3.4.4
+        specifier: ^3.4.5
+        version: 3.4.5
       '@tanstack/query-sync-storage-persister':
         specifier: ^5.59.13
         version: 5.59.13
       '@tanstack/svelte-query':
         specifier: https://pkg.pr.new/@tanstack/svelte-query@ccce0b8
         version: https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244)
+      '@tanstack/svelte-query-devtools':
+        specifier: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8
+        version: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)
       '@tanstack/svelte-query-persist-client':
         specifier: https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8
         version: https://pkg.pr.new/@tanstack/svelte-query-persist-client@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)
@@ -51,9 +54,6 @@ importers:
       '@tanstack/eslint-plugin-query':
         specifier: ^5.59.7
         version: 5.59.7(eslint@8.57.0)(typescript@5.5.4)
-      '@tanstack/svelte-query-devtools':
-        specifier: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8
-        version: https://pkg.pr.new/@tanstack/svelte-query-devtools@ccce0b8(@tanstack/svelte-query@https://pkg.pr.new/@tanstack/svelte-query@ccce0b8(svelte@5.0.0-next.244))(svelte@5.0.0-next.244)
       '@tsconfig/node22':
         specifier: ^22.0.0
         version: 22.0.0
@@ -995,8 +995,8 @@ packages:
   '@dual-bundle/import-meta-resolve@4.1.0':
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
 
-  '@dvcol/common-utils@1.17.2':
-    resolution: {integrity: sha512-0IbM2B05gVcp+SgRprOJepGAP2ZwQh9kSS8Bz5kk2jHZy35CCB8z7wQH/B9wqEkq4jlWIFJH1I6DKiylui0lzA==}
+  '@dvcol/common-utils@1.18.0':
+    resolution: {integrity: sha512-0dNSGPlB96gYQsbQhwlcxyOxQg0Ps/hw0hfr77ez6eFTKLNPF5ImzbuFMa/HGVe/3qd747jyrQKguSqKbyWprg==}
     engines: {node: '>=20', pnpm: '>= 8'}
 
   '@dvcol/eslint-plugin-presets@1.3.11':
@@ -1095,14 +1095,14 @@ packages:
       postcss-scss:
         optional: true
 
-  '@dvcol/svelte-simple-router@1.4.0':
-    resolution: {integrity: sha512-H4E4P6/xfrEIK79sDhFw9jD1hJOoTNumBmRfPznGtN6O+DFkHBLbPku+fpTMDYegeYRCW0IhkBH3KKlfh9Drug==}
+  '@dvcol/svelte-simple-router@1.5.0':
+    resolution: {integrity: sha512-wsW9D1Nni6oo3vyjbpQLTkQQWyYSmWsM9ZUIH9/VvHmP4YTKqh5zlXa14NTS2RQGy1chxMrxAsCmemJQGrn1mQ==}
     engines: {node: '>=20', pnpm: '>= 8'}
     peerDependencies:
       svelte: '>=5'
 
-  '@dvcol/web-extension-utils@3.4.4':
-    resolution: {integrity: sha512-LQBB/UPk8TVf/8eb4coLfFxP0kpeFW1BRhCbj+vWy96+qgMbmDHNo8N4rCg3tv8epVQtrXHclgJ28UG8vnDygg==}
+  '@dvcol/web-extension-utils@3.4.5':
+    resolution: {integrity: sha512-ssMRsd8nYaipxqrewKRgmgeFNZz+UpH3KcfMd71iPhzQOpk5f4tA/VBpvzTr0R3IOFwmD4HwZ4h8pI2dUy0Cfg==}
     engines: {node: '>=16', pnpm: '>= 6.32.0'}
 
   '@esbuild/aix-ppc64@0.20.2':
@@ -7304,7 +7304,7 @@ snapshots:
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
 
-  '@dvcol/common-utils@1.17.2':
+  '@dvcol/common-utils@1.18.0':
     dependencies:
       pretty-bytes: 6.1.1
 
@@ -7359,9 +7359,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@dvcol/svelte-simple-router@1.4.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
+  '@dvcol/svelte-simple-router@1.5.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
     dependencies:
-      '@dvcol/common-utils': 1.17.2
+      '@dvcol/common-utils': 1.18.0
       svelte: 5.0.0-next.244
       vite: 5.4.7(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(terser@5.31.6)
     transitivePeerDependencies:
@@ -7374,9 +7374,9 @@ snapshots:
       - sugarss
       - terser
 
-  '@dvcol/web-extension-utils@3.4.4':
+  '@dvcol/web-extension-utils@3.4.5':
     dependencies:
-      '@dvcol/common-utils': 1.17.2
+      '@dvcol/common-utils': 1.18.0
       fast-glob: 3.3.2
       fs-extra: 11.2.0
       rxjs: 7.8.1
