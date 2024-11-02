@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { RouterContext } from '@dvcol/svelte-simple-router/components';
+
   import HomeComponent from '~/components/home/HomeComponent.svelte';
   import QueryProvider from '~/components/providers/QueryProvider.svelte';
   import Suspense from '~/components/utils/Suspense.svelte';
+  import { options as routerOptions } from '~/router/routes';
   import { initServices } from '~/web/init-services';
 
   const {
@@ -19,7 +22,9 @@
 <div class="app-container">
   <QueryProvider {root}>
     <Suspense promise={initServices(options)}>
-      <HomeComponent />
+      <RouterContext options={routerOptions}>
+        <HomeComponent />
+      </RouterContext>
     </Suspense>
   </QueryProvider>
 </div>

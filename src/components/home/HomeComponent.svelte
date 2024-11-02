@@ -1,13 +1,22 @@
 <script lang="ts">
-  import { RouterContext, RouterView } from '@dvcol/svelte-simple-router/components';
-  import { link } from '@dvcol/svelte-simple-router/router';
+  import { RouterView } from '@dvcol/svelte-simple-router/components';
+
+  import { useNavigate } from '@dvcol/svelte-simple-router/router';
   import { transition } from '@dvcol/svelte-simple-router/utils';
 
   import Logo from '~/assets/svg/reddit-alien.svg';
-  import { options, RouteName } from '~/router/routes';
+  import NeoButton from '~/components/common/buttons/neo-button.svelte';
+  import { RouteName } from '~/router/routes';
   import { useI18n } from '~/utils/i18n.utils';
 
   const i18n = useI18n('home');
+
+  const { push } = useNavigate();
+
+  let loading = $state(true);
+  setInterval(() => {
+    loading = !loading;
+  }, 30000);
 </script>
 
 <main class="home-container">
@@ -17,22 +26,23 @@
     </a>
   </div>
   <h1>{i18n('title')}</h1>
+  <div class="links">
+    <NeoButton onclick={() => push({ path: `/${RouteName.Hello}` })}>{RouteName.Hello}</NeoButton>
+    <NeoButton onclick={() => push({ path: `/${RouteName.Goodbye}` })}>{RouteName.Goodbye}</NeoButton>
+    <NeoButton disabled onclick={() => push({ path: `/${RouteName.Home}` })}>Disabled</NeoButton>
+    <NeoButton {loading} onclick={() => push({ path: `/${RouteName.Home}` })}>Loading</NeoButton>
+    <NeoButton text onclick={() => push({ path: `/${RouteName.Goodbye}` })}>Text</NeoButton>
+    <NeoButton rounded onclick={() => push({ path: `/${RouteName.Goodbye}` })}>Rounded</NeoButton>
+  </div>
 
-  <RouterContext {options}>
-    <a href={null} use:link={{ path: `/${RouteName.Hello}` }}>{RouteName.Hello}</a>
-    <a href={`/${RouteName.Goodbye}`} use:link>{RouteName.Goodbye}</a>
+  <div class="view">
+    <RouterView {transition} />
+  </div>
 
-    <div class="view">
-      <RouterView {transition} />
-    </div>
-  </RouterContext>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework
-    powered by Vite!
-  </p>
-
-  <p class="read-the-docs">{i18n('learn_more')}</p>
+  <div class="links" style="gap: 5rem;">
+    <NeoButton {loading} pulse onclick={() => push({ path: `/${RouteName.Hello}` })}>Pulse</NeoButton>
+    <NeoButton coalesce onclick={() => push({ path: `/${RouteName.Hello}` })}>Coalesce</NeoButton>
+  </div>
 </main>
 
 <style lang="scss">
@@ -43,6 +53,12 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
 
   .logo {
@@ -55,17 +71,5 @@
   .view {
     min-height: 10rem;
     padding: 2rem;
-  }
-
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-
-  .read-the-docs {
-    color: #888;
   }
 </style>

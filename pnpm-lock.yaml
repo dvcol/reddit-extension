@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@devvit/public-api':
-        specifier: ^0.11.0
-        version: 0.11.0
+        specifier: ^0.11.1
+        version: 0.11.1
       '@dvcol/common-utils':
-        specifier: ^1.18.0
-        version: 1.18.0
+        specifier: ^1.18.1
+        version: 1.18.1
       '@dvcol/svelte-simple-router':
-        specifier: ^1.5.0
-        version: 1.5.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
+        specifier: ^1.6.1
+        version: 1.6.1(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)
       '@dvcol/web-extension-utils':
         specifier: ^3.4.5
         version: 3.4.5
@@ -978,25 +978,25 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^6.1.0
 
-  '@devvit/protos@0.11.0':
-    resolution: {integrity: sha512-4oDaJp/IyctqmwSwyOWEgKBCoLat/ZqOCURXSkoyU6+hKV31VshcBgjitD+81RTes94aexHibsjRp365QRD31Q==}
+  '@devvit/protos@0.11.1':
+    resolution: {integrity: sha512-cxKqTH+D1ahIQhZGSQR4EyEpludVHgs6auftYd8g2tgea/9QC9F0KN9VQqJzKoH1ozJk1ATJZY+PPAtyQvJXtA==}
     peerDependencies:
       twirp-ts: ^2.5.0
     peerDependenciesMeta:
       twirp-ts:
         optional: true
 
-  '@devvit/public-api@0.11.0':
-    resolution: {integrity: sha512-36InsXhNtVlmsQk/rPE5KotZnmRxLjRHVN22j74IQ/cwiI+SSXMKe554x60OwzxOSeytEzH/fgVJfA7bTRpsIA==}
+  '@devvit/public-api@0.11.1':
+    resolution: {integrity: sha512-fpKECS7r1evxVRoiwcaSBlGfiZM0HZ3y6xhJ4r4JBBN8nh7lQgGJW1TAJrpNj812hJydTjZ5v5E4MQZDbIIRaw==}
 
-  '@devvit/shared-types@0.11.0':
-    resolution: {integrity: sha512-urAj/J8c6LbhyKsiQdAa8YpsAqfCBfbMm4RWEoGHO8bFBXaDUQmtgTSz2XmmWOEWdA5A+zaiOXn18oz756G3xA==}
+  '@devvit/shared-types@0.11.1':
+    resolution: {integrity: sha512-BrpjK87du/gHZHNjyvXFokBzBBxJ+hL2Lmh67roBZyPAhzl0Mg5khyC3N2HxErNzPZW454c8JXBm8vW2z8vv2g==}
 
   '@dual-bundle/import-meta-resolve@4.1.0':
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
 
-  '@dvcol/common-utils@1.18.0':
-    resolution: {integrity: sha512-0dNSGPlB96gYQsbQhwlcxyOxQg0Ps/hw0hfr77ez6eFTKLNPF5ImzbuFMa/HGVe/3qd747jyrQKguSqKbyWprg==}
+  '@dvcol/common-utils@1.18.1':
+    resolution: {integrity: sha512-qCG7fHkAnOnjjJ0WLWCXA6s17RUKWED5Et9G0fXtNIzQJHcpeCuOTTtrTO1FA1L5kf7Mz8+o9Rb0wCPpeKmXZQ==}
     engines: {node: '>=20', pnpm: '>= 8'}
 
   '@dvcol/eslint-plugin-presets@1.3.11':
@@ -1095,8 +1095,8 @@ packages:
       postcss-scss:
         optional: true
 
-  '@dvcol/svelte-simple-router@1.5.0':
-    resolution: {integrity: sha512-wsW9D1Nni6oo3vyjbpQLTkQQWyYSmWsM9ZUIH9/VvHmP4YTKqh5zlXa14NTS2RQGy1chxMrxAsCmemJQGrn1mQ==}
+  '@dvcol/svelte-simple-router@1.6.1':
+    resolution: {integrity: sha512-OOyxfYEru1jWhp8oePKLJaUAEYVoUkOxw9kfL9+QE5mTl4vpYtiD5fRIXIvjqVxYoZUdAUmZGWGuJx59l4o+gA==}
     engines: {node: '>=20', pnpm: '>= 8'}
     peerDependencies:
       svelte: '>=5'
@@ -7278,15 +7278,15 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.1.2
 
-  '@devvit/protos@0.11.0':
+  '@devvit/protos@0.11.1':
     dependencies:
       protobufjs: 7.3.2
       rxjs: 7.8.1
 
-  '@devvit/public-api@0.11.0':
+  '@devvit/public-api@0.11.1':
     dependencies:
-      '@devvit/protos': 0.11.0
-      '@devvit/shared-types': 0.11.0
+      '@devvit/protos': 0.11.1
+      '@devvit/shared-types': 0.11.1
       base64-js: 1.5.1
       clone-deep: 4.0.1
       core-js: 3.27.2
@@ -7294,9 +7294,9 @@ snapshots:
     transitivePeerDependencies:
       - twirp-ts
 
-  '@devvit/shared-types@0.11.0':
+  '@devvit/shared-types@0.11.1':
     dependencies:
-      '@devvit/protos': 0.11.0
+      '@devvit/protos': 0.11.1
       jsonschema: 1.4.1
       uuid: 9.0.0
     transitivePeerDependencies:
@@ -7304,7 +7304,7 @@ snapshots:
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
 
-  '@dvcol/common-utils@1.18.0':
+  '@dvcol/common-utils@1.18.1':
     dependencies:
       pretty-bytes: 6.1.1
 
@@ -7359,9 +7359,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@dvcol/svelte-simple-router@1.5.0(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
+  '@dvcol/svelte-simple-router@1.6.1(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(svelte@5.0.0-next.244)(terser@5.31.6)':
     dependencies:
-      '@dvcol/common-utils': 1.18.0
+      '@dvcol/common-utils': 1.18.1
       svelte: 5.0.0-next.244
       vite: 5.4.7(@types/node@22.5.1)(sass@1.77.8)(sugarss@2.0.0)(terser@5.31.6)
     transitivePeerDependencies:
@@ -7376,7 +7376,7 @@ snapshots:
 
   '@dvcol/web-extension-utils@3.4.5':
     dependencies:
-      '@dvcol/common-utils': 1.18.0
+      '@dvcol/common-utils': 1.18.1
       fast-glob: 3.3.2
       fs-extra: 11.2.0
       rxjs: 7.8.1

@@ -14,11 +14,15 @@
   font: inherit;
 }
 
-/* Default to dark mode */
+/* Global defaults */
 :host,
 html {
+  /* Default to dark mode */
   color-scheme: dark light;
   hanging-punctuation: first last;
+
+  /* Default font stack */
+  font-family: 'Nunito Sans', ui-rounded, sans-serif;
 }
 
 /*

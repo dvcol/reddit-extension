@@ -1,77 +1,83 @@
-@mixin hover-background(
-  $from: var(--custom-bg-color, var(--bg-color)),
-  $to: var(--custom-bg-color-hover, var(--bg-color-hover)),
-  $blur: var(--custom-bg-blur, var(--bg-blur)),
-  $blur-hover: var(--custom-bg-blur-hover, var(--bg-blur-hover)),
-  $transition: 0.5s var(--n-bezier),
-  $transition-prop: all
+@use 'src/styles/animation' as animation;
+@include animation.coalesce;
+@include animation.pulse;
+
+%after-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  content: '';
+}
+
+@mixin pulse(
+  $box-shadow: var(--pulse-box-shadow, var(--box-shadow-raised-2)),
+  $duration: var(--pulse-duration, 4s),
+  $delay: var(--pulse-delay, 2s),
+  $iteration: infinite
 ) {
-  background: $from;
-  // stylelint-disable-next-line property-no-vendor-prefix -- necessary for safari
-  -webkit-backdrop-filter: blur($blur);
-  backdrop-filter: blur($blur);
-  transition: $transition-prop $transition;
-  will-change: color, background, background-color, backdrop-filter, box-shadow, border-color, scale, opacity, backdrop-filter;
+  &.pulse {
+    &::after,
+    &::before {
+      @extend %after-before;
 
-  &:active,
-  &:hover {
-    background: $to;
-    // stylelint-disable-next-line property-no-vendor-prefix -- necessary for safari
-    -webkit-backdrop-filter: blur($blur-hover);
-    backdrop-filter: blur($blur-hover);
+      box-shadow: $box-shadow;
+    }
+
+    &::before {
+      animation: pulse $duration linear $iteration;
+    }
+
+    &::after {
+      animation: pulse $duration linear $delay $iteration;
+    }
+
+    &.pressed,
+    &:focus-visible,
+    &:hover,
+    &:active {
+      &::after,
+      &::before {
+        animation-direction: reverse;
+      }
+    }
   }
 }
 
-@mixin hover-background-only($from: var(--custom-bg-color, var(--bg-color)), $to: var(--custom-bg-color-hover, var(--bg-color-hover))) {
-  background: $from;
-
-  &:active,
-  &:hover {
-    background: $to;
-  }
-}
-
-@mixin progress-background(
-  $color: var(--progress-color, var(--color-primary)),
-  $rail: var(--rail-color, var(--color-primary-focus)),
-  $progress: var(--progress, 0%)
+@mixin coalesce(
+  $box-shadow: var(--coalesce-box-shadow, var(--box-shadow-raised-2)),
+  $duration: var(--coalesce-duration, 4s),
+  $delay: var(--coalesce-delay, 2s),
+  $iteration: infinite
 ) {
-  background: linear-gradient(to right, $color 0%, $color var(--progress, 0%), $rail $progress, $rail 100%);
-}
+  &.coalesce {
+    &::after,
+    &::before {
+      @extend %after-before;
 
-@mixin hover-box-shadow($transition: 0.5s var(--n-bezier), $box-shadow: var(--image-box-shadow-hover)) {
-  transition: box-shadow $transition;
+      box-shadow: $box-shadow;
+    }
 
-  &:active,
-  &:focus-within,
-  &:hover {
-    box-shadow: $box-shadow;
-  }
-}
+    &::before {
+      animation: coalesce $duration linear $iteration;
+    }
 
-@mixin transition-show-hide-height($transition: var(--n-bezier), $padding: 12px) {
-  &.hidden {
-    max-height: 0;
-    margin-top: -#{$padding};
-    overflow: hidden;
-    opacity: 0;
-    transition:
-      scale 0.5s $transition,
-      opacity 0.5s $transition,
-      max-height 0.25s $transition,
-      margin-top 0.5s $transition;
-    scale: 0.95;
+    &::after {
+      animation: coalesce $duration linear $delay $iteration;
+    }
 
-    &.show {
-      max-height: var(--full-height, 100dvh);
-      margin-top: initial;
-      opacity: 1;
-      transition:
-        scale 0.5s $transition,
-        opacity 0.5s $transition,
-        max-height 0.25s $transition,
-        margin-top 0.25s $transition;
-      scale: 1;
+    &.pressed,
+    &:focus-visible,
+    &:hover,
+    &:active {
+      &::after,
+      &::before {
+        animation-direction: reverse;
+      }
     }
   }
 }
