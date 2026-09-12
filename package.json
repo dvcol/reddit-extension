@@ -110,7 +110,7 @@
     "rimraf": "^6.0.1",
     "rollup": "^4.21.1",
     "sass": "^1.77.8",
-    "standard-version": "^9.5.0",
+    "commit-and-tag-version": "^9.5.0",
     "stylelint": "^16.9.0",
     "svelte-check": "^4.0.1",
     "svelte-preprocess": "^6.0.2",
